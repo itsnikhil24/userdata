@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets\stylesheetusers.css" />
+  </head>
+  <body>
+      <div class="buttons" id="goback"><a href="/">Go Back</a></div> 
+      <div class="container">
+        <% users.forEach(function(profile){ %>
+          <div class="card">
+            <div id="userimage">
+              <img id="image" src="images\IMG-20240314-WA0017.jpg" alt="" />
+            </div>
+            <h4><%= profile.names %></h4>
+            <h4><%= profile.email %></h4>
+            <div class="links">
+             <div class="buttons"><a href="/edit">Edit User</a> </div> 
+             <div class="buttons"><a href="/delete/<%= profile.id %>">delete User</a></div> 
+              
+            </div>
+          </div>
+       <% }) %>
+      
+    </div>
+  </body>
+</html>
