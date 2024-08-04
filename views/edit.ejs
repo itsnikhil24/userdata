@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheets\style.css" />
+    <link rel="stylesheet" href="/stylesheets/edit.css" >
   </head>
   <body>
     <div class="container">
-    <div class="link"><a href="/users">Click To Read Users</a></div>
-    <div class="form">
-      <form action="/create" method="post" id="login">
-        <!-- <label for="name">Name </label> -->
-        <input type="text" id="name" name="names" placeholder="Name"/>
-        <!-- <label for="email">email </label> -->
-        <input type="text" id="email" name="email"  placeholder="Email"/>
-        <!-- <label for="password">password </label> -->
-        <input type="password" id="password" name="password"  placeholder="Password" />
-        <!-- <input type='file' accept="image/*" name="image" /> -->
-        <input type="submit" id="submit" />
-      </form>
+      <div class="link"><a href="/user">Click To Read Users</a></div>
+      <div class="form">
+        <form action="/update/<%= to_edit._id %>" method="post" id="login">
+          <!-- <label for="name">Name </label> -->
+          <input type="text" id="name" name="names" placeholder="Name"  value="<%= to_edit.names %>"/>
+          <!-- <label for="email">email </label> -->
+          <input type="text" id="email" name="email" placeholder="Email"  value="<%= to_edit.email %>"/>
+          <!-- <label for="password">password </label> -->
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            value="<%=to_edit.password %>"
+          />
+          <!-- <input type='file' accept="image/*" name="image" /> -->
+          <input type="submit" id="submit" value="Update" />
+        </form>
+      </div>
     </div>
-  </div>
   </body>
 </html>
