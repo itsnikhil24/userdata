@@ -19,6 +19,10 @@ app.get('/delete/:id',async function (req,res) {
     let todelete= await usermodel.findOneAndDelete({_id: req.params.id});
     res.redirect('/user');
 })
+app.get('/edit/:id',async function (req,res) {
+    let to_edit= await usermodel.find ({_id: req.params.id});
+    res.render('edit.ejs',{to_edit});
+})
 app.get('/user',async function (req,res) {
     let allusers= await usermodel.find();
     console.log(allusers);
