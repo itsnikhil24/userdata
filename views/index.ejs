@@ -10,14 +10,14 @@
     <div class="container">
     <div class="link"><a href="/user">Click To Read Users</a></div>
     <div class="form">
-      <form action="/create" method="post" id="login">
+      <form action="/create" method="post" id="login" enctype="multipart/form-data">
         <!-- <label for="name">Name </label> -->
         <input type="text" id="name" name="names" placeholder="Name"/>
         <!-- <label for="email">email </label> -->
         <input type="text" id="email" name="email"  placeholder="Email"/>
         <!-- <label for="password">password </label> -->
         <input type="password" id="password" name="password"  placeholder="Password" />
-        <!-- <input type='file' accept="image/*" name="image" /> -->
+        <input type='file'  name="image" />
         <input type="submit" id="submit" />
       </form>
     </div>

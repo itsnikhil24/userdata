@@ -6,6 +6,11 @@ const userschema=mongoose.Schema({
 names:String,
 email:String,
 password:String,
+img:
+{
+    data: Buffer,
+    contentType: String
+}
 
 
 })

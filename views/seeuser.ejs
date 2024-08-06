@@ -12,7 +12,10 @@
         <% users.forEach(function(profile){ %>
           <div class="card">
             <div id="userimage">
-              <img id="image" src="images\IMG-20240314-WA0017.jpg" alt="" />
+              <img
+              src="data:image/<%=profile.img.contentType%>;base64,
+                      <%=profile.img.data.toString('base64')%>"
+            />
             </div>
             <h4><%= profile.names %></h4>
             <h4><%= profile.email %></h4>
